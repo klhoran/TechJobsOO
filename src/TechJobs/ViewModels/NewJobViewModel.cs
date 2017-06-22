@@ -6,7 +6,7 @@ using TechJobs.Models;
 
 namespace TechJobs.ViewModels
 {
-    public class NewJobViewModel : BaseViewModel
+    public class NewJobViewModel
     {
         [Required(ErrorMessage ="Name is required")]
         public string Name { get; set; }
