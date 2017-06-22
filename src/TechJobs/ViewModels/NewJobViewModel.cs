@@ -8,7 +8,7 @@ namespace TechJobs.ViewModels
 {
     public class NewJobViewModel
     {
-        [Required]
+        [Required(ErrorMessage ="Name is required")]
         public string Name { get; set; }
 
         [Required]
@@ -17,6 +17,7 @@ namespace TechJobs.ViewModels
 
         // TODO #3 - Included other fields needed to create a job,
         // with correct validation attributes and display names.
+
         [Required]
         [Display(Name = "Location")]
         public int LocationID { get; set; }
@@ -27,7 +28,7 @@ namespace TechJobs.ViewModels
 
         [Required]
         [Display(Name = "Position Type")]
-        public int PositionTypesID { get; set; }
+        public int PositionTypeID { get; set; }
 
         public List<SelectListItem> Employers { get; set; } = new List<SelectListItem>();
         public List<SelectListItem> Locations { get; set; } = new List<SelectListItem>();
